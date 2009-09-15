@@ -1,0 +1,53 @@
+
+1. Agent 
+	1.1 How to use 
+	./agent.sh [application]
+	./agent.sh guestbook 	// you should have guestbook.properties in etc folder 
+
+2. Proxy 
+	2.1 How to use
+	./proxy.sh [script_name]
+	./proxy.sh guestbook // this will generate guestbook.py in script/proxy folder. 
+
+3. Console
+	3.1 How to use 
+	./console.sh 	// you need XWindow for this since this is GUI application. 
+
+4. Directories
+	bin/ 
+	bin/agent.sh
+	bin/proxy.sh
+	bin/console.sh
+
+	etc/
+	etc/application.properties
+
+	log/
+	log/guestbook/*.log
+
+	scripts/
+	scripts/proxy 
+	scripts/guestbook.py
+
+5. Data Analysis
+  
+  - making excel data and statistics input
+
+  ./AppPlot.py data_file name 
+  ./AppPlotMulti.py hbase gb_hbase 3 data_appscale-image 5
+
+  - draw chart
+
+  ./AppTransactionPlot.py first > /var/www/hbase_transaction1.png
+  ./AppTransactionPlot.py all > /var/www/hbase_transaction.png
+
+  ./AppResponsePlot.py all > /var/www/hbase_response.png
+  ./AppResponsePlot.py first > /var/www/hbase_response1.png
+
+
+6. Collect Data
+  scp gb_*.tgz spark@twolves.cs.ucsb.edu:~/Project/Grinder/AppBenchmark/collect
+
+-- JFreeChart
+http://downloads.sourceforge.net/project/jfreechart/1.%20JFreeChart/1.0.13/jfreechart-1.0.13.tar.gz?use_mirror=softlayer
+http://downloads.sourceforge.net/project/jfreechart/2.%20Documentation/1.0.13/jfreechart-1.0.13-install.pdf?use_mirror=softlayer

@@ -1,0 +1,9 @@
+!!python/object:dbconfig.DBConfig {DATABASE: appbench, HOST: bulls.cs.ucsb.edu, PASS: pw,
+  SCHEMA: " (\n  id MEDIUMINT NOT NULL AUTO_INCREMENT,\n  agent varchar(20) NOT NULL,\n\
+    \  sample int(4) UNSIGNED NOT NULL,\n  thread int(4) UNSIGNED NOT NULL,\n  run\
+    \ int(4)  UNSIGNED NOT NULL,\n  test int(4)  UNSIGNED NOT NULL,\n  start BIGINT\
+    \ UNSIGNED NOT NULL,\n  latency INT UNSIGNED NOT NULL,\n  errors INT UNSIGNED\
+    \ NOT NULL,\n  res_code INT UNSIGNED NOT NULL,\n  res_len INT UNSIGNED NOT NULL,\n\
+    \  res_err INT UNSIGNED NOT NULL,\n  resolve INT UNSIGNED NOT NULL,\n  establish\
+    \ INT UNSIGNED NOT NULL,\n  firstbyte INT UNSIGNED NOT NULL,\n  PRIMARY KEY  (id)\n\
+    );", USER: uid}
